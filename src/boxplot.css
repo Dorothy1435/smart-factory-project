@@ -1,0 +1,67 @@
+#boxplot.css
+.boxplot-container {
+    padding: 40px;
+    max-width: 900px;
+    margin: 0 auto;
+    text-align: center;
+  }
+  
+  .boxplot-title {
+    font-size: 28px;
+    font-weight: bold;
+    margin-bottom: 10px;
+  }
+  
+  .boxplot-description {
+    font-size: 16px;
+    line-height: 1.6;
+    margin-bottom: 30px;
+  }
+  
+  .plot-wrapper {
+    margin-bottom: 30px;
+  }
+  
+  .boxplot-key-points ul {
+    text-align: left;
+    display: inline-block;
+    line-height: 2;
+    padding-left: 20px;
+  }
+  
+  .boxplot-navigation {
+    margin-top: 40px;
+  }
+  
+  .nav-button {
+    margin: 10px;
+    padding: 10px 20px;
+    background-color: #4F46E5;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: 0.2s ease;
+  }
+  
+  .nav-button:hover {
+    background-color: #4338CA;
+  }
+  
+  .boxplot-img {
+    max-width: 50%;
+    border-radius: 12px;
+    box-shadow: 0 6px 16px rgba(0, 0, 0, 0.1);
+  }
+
+  .visualize-button {
+    padding: 10px 20px;
+    background-color: #f97316 !important; /* 주황색 */
+    color: white;
+    border: none;
+    border-radius: 8px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.2s ease;
+  }

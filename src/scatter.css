@@ -1,0 +1,181 @@
+/* scatter.css */
+.scatter-container {
+    padding: 40px;
+    padding-top: 50px;
+    max-width: 900px;
+    margin: 0 auto;
+    text-align: center;
+  }
+  
+  .scatter-title {
+    font-size: 28px;
+    font-weight: bold;
+    margin-bottom: 20px;
+  }
+  
+  .scatter-description {
+    font-size: 16px;
+    line-height: 1.6;
+    margin-bottom: 30px;
+  }
+  
+  .scatter-example {
+    margin-bottom: 30px;
+  }
+  
+  .scatter-img {
+    max-width: 50%;
+    border-radius: 12px;
+    box-shadow: 0 6px 16px rgba(0, 0, 0, 0.1);
+  }
+  
+  .scatter-caption {
+    font-size: 14px;
+    color: #555;
+    margin-top: 8px;
+  }
+  
+  .scatter-input-section {
+    margin-bottom: 30px;
+  }
+  
+  .input-area {
+    width: 100%;
+    max-width: 600px;
+    margin: 10px auto;
+    padding: 12px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    font-size: 14px;
+    resize: vertical;
+    display: block;
+  }
+  
+  .visualize-button {
+    padding: 10px 20px;
+    background-color: #f97316 !important; /* 주황색 */
+    color: white;
+    border: none;
+    border-radius: 8px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.2s ease;
+  }
+  
+  .visualize-button:hover {
+    background-color: #2563eb;
+  }
+  
+  .example-button {
+    margin-left: 10px;
+    padding: 10px 20px;
+    background-color: #facc15;
+    color: black;
+    border: none;
+    border-radius: 8px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.2s;
+  }
+  
+  .example-button:hover {
+    background-color: #eab308;
+  }
+  
+  .scatter-plot-section {
+    margin: 40px auto;
+    max-width: 700px;
+    text-align: center;
+  }
+  
+  .scatter-guide-wrapper {
+    margin: 40px auto;
+    text-align: center;
+  }
+  
+  .accordion-toggle {
+    padding: 10px 20px;
+    background-color: #facc15;
+    color: black;
+    border: none;
+    border-radius: 8px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.2s;
+  }
+  
+  .accordion-toggle:hover {
+    background-color: #eab308;
+  }
+  
+  .scatter-guide {
+    margin-top: 20px;
+    max-width: 700px;
+    background-color: #e0f2fe;
+    border-left: 6px solid #38bdf8;
+    padding: 20px 24px;
+    border-radius: 12px;
+    font-size: 15px;
+    text-align: left;
+    line-height: 1.7;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  
+  .scatter-guide h2 {
+    font-size: 18px;
+    margin-bottom: 12px;
+    color: #0369a1;
+  }
+  
+  .scatter-guide ul {
+    padding-left: 20px;
+    list-style-type: disc;
+  }
+  
+  .scatter-guide li {
+    margin-bottom: 8px;
+  }
+  
+  .scatter-navigation {
+    margin-top: 40px;
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+  }
+  
+  .nav-button {
+    padding: 10px 18px;
+    background-color: #3b82f6;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    font-weight: 500;
+    text-decoration: none;
+    cursor: pointer;
+  }
+  
+  .nav-button:hover {
+    background-color: #2563eb;
+  }
+  
+  /* 회귀선 레이블 꾸미기 (Plotly 내부 자동 렌더링용) */
+.plotly .legend .traces .legendtext {
+    font-weight: 600;
+    color: #1e3a8a; /* 딥블루 */
+  }
+  
+  /* 시각화 영역의 강조 애니메이션 효과 */
+  .scatter-plot-section {
+    transition: box-shadow 0.3s ease;
+  }
+  
+  .scatter-plot-section:hover {
+    box-shadow: 0 0 12px rgba(59, 130, 246, 0.3);
+  }
+  
+  /* 회귀선 설명 강조용 */
+  .scatter-guide li strong {
+    color: #1d4ed8;
+  }
+  

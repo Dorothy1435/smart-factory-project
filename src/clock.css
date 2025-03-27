@@ -1,0 +1,195 @@
+/* clock.css */
+.clock-container {
+    padding: 40px;
+    padding-top: 50px;
+    max-width: 900px;
+    margin: 0 auto;
+    text-align: center;
+  }
+  
+  .clock-title {
+    font-size: 28px;
+    font-weight: bold;
+    margin-bottom: 20px;
+  }
+  
+  .clock-description {
+    font-size: 16px;
+    line-height: 1.6;
+    margin-bottom: 30px;
+  }
+  
+  .clock-example {
+    margin-bottom: 30px;
+  }
+  
+  .clock-img {
+    max-width: 50%;
+    border-radius: 12px;
+    box-shadow: 0 6px 16px rgba(0, 0, 0, 0.1);
+  }
+  
+  .clock-caption {
+    font-size: 14px;
+    color: #555;
+    margin-top: 8px;
+  }
+  
+  .clock-input-section {
+    margin-bottom: 30px;
+  }
+  
+  .input-area {
+    width: 100%;
+    max-width: 600px;
+    margin: 0 auto;
+    padding: 12px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    font-size: 14px;
+    resize: vertical;
+  }
+  
+  .visualize-button {
+    padding: 10px 20px;
+    background-color: #f97316 !important; /* 주황색 */
+    color: white;
+    border: none;
+    border-radius: 8px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.2s ease;
+  }
+  
+  .visualize-button:hover {
+    background-color: #ea580c;
+  }
+  
+  .example-button {
+    margin-left: 10px;
+    padding: 10px 20px;
+    background-color: #facc15;
+    color: black;
+    border: none;
+    border-radius: 8px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.2s;
+  }
+  
+  .example-button:hover {
+    background-color: #eab308;
+  }
+  
+  .clock-plot-section {
+    margin: 40px auto;
+    max-width: 700px;
+    text-align: center;
+  }
+  
+  /* 🔍 해석 요약 */
+  .clock-summary {
+    margin-top: 30px;
+    padding: 20px;
+    background-color: #f3f4f6;
+    border-radius: 10px;
+    text-align: left;
+    max-width: 600px;
+    margin-left: auto;
+    margin-right: auto;
+    font-size: 15px;
+  }
+  
+  .clock-summary h3 {
+    margin-bottom: 12px;
+    font-weight: 600;
+  }
+  
+  .clock-summary p {
+    margin: 4px 0;
+  }
+  
+  .clock-summary .alert {
+    color: #dc2626;
+    font-weight: bold;
+    margin-top: 12px;
+  }
+  
+  .clock-key-points ul {
+    text-align: left;
+    display: inline-block;
+    line-height: 2;
+    padding-left: 20px;
+  }
+  
+  .clock-navigation {
+    margin-top: 40px;
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+  }
+  
+  .nav-button {
+    padding: 10px 18px;
+    background-color: #3b82f6;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    font-weight: 500;
+    text-decoration: none;
+    cursor: pointer;
+  }
+  
+  .nav-button:hover {
+    background-color: #2563eb;
+  }
+  
+  .clock-guide-wrapper {
+    margin: 40px auto;
+    text-align: center;
+  }
+  
+  .accordion-toggle {
+    padding: 10px 20px;
+    background-color: #facc15;
+    color: black;
+    border: none;
+    border-radius: 8px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.2s;
+  }
+  
+  .accordion-toggle:hover {
+    background-color: #eab308;
+  }
+  
+  .clock-guide {
+    margin-top: 20px;
+    max-width: 700px;
+    background-color: #fef9c3;
+    border-left: 6px solid #facc15;
+    padding: 20px 24px;
+    border-radius: 12px;
+    font-size: 15px;
+    text-align: left;
+    line-height: 1.7;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  
+  .clock-guide h2 {
+    font-size: 18px;
+    margin-bottom: 12px;
+    color: #92400e;
+  }
+  
+  .clock-guide ul {
+    padding-left: 20px;
+    list-style-type: disc;
+  }
+  
+  .clock-guide li {
+    margin-bottom: 8px;
+  }
+  
