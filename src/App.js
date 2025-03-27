@@ -8,13 +8,52 @@ import Clock from './clock';
 import Scatter from './scatter';
 import staticNews from './newsData';
 import NewsList from './NewsList';
+import ChartPreview from './ChartPreview';
+import AnomalyArt from './AnomalyArt';
+import Intro from './Intro';
 import { motion, AnimatePresence } from 'framer-motion';
 import './App.css';
 
-
+const factoryImages = [
+  { src: '/images/factory1.png' },
+  { src: '/images/factory2.png' },
+  { src: '/images/factory3.png' },
+  { src: '/images/factory4.jpg' },
+  { src: '/images/factory5.jpg' },
+  { src: '/images/factory6.png' },
+  { src: '/images/factory7.png'},
+  { src: '/images/factory8.png'},
+  { src: '/images/factory9.png' }
+];
 
 function App() {
   const [currentNewsIndex, setCurrentNewsIndex] = useState(0);
+  const [currentFactoryIndex, setCurrentFactoryIndex] = useState(0);
+  const [isPaused, setIsPaused] = useState(false);
+
+  const togglePause = () => {
+    setIsPaused((prev) => !prev);
+  };
+  
+
+  useEffect(() => {
+    if (isPaused) return;
+
+    const imgInterval = setInterval(() => {
+      setCurrentFactoryIndex((prev) => (prev + 1) % factoryImages.length);
+    }, 8000); // ✅ 8초 정도 여유롭게
+    return () => clearInterval(imgInterval);
+  }, [isPaused]); // ✅ 상태 변화 감지
+
+  const handleFactoryPrev = () => {
+    setCurrentFactoryIndex((prev) =>
+      prev === 0 ? factoryImages.length - 1 : prev - 1
+    );
+  };
+
+  const handleFactoryNext = () => {
+    setCurrentFactoryIndex((prev) => (prev + 1) % factoryImages.length);
+  };
 
   useEffect(() => {
     const interval = setInterval(() => {
@@ -22,6 +61,15 @@ function App() {
     }, 7000);
     return () => clearInterval(interval);
   }, []);
+  
+  useEffect(() => {
+    const imgInterval = setInterval(() => {
+      setCurrentFactoryIndex((prev) => (prev + 1) % factoryImages.length);
+    }, 8000);
+    return () => clearInterval(imgInterval);
+  }, []);
+
+
 
   const handlePrev = () => {
     setCurrentNewsIndex((prevIndex) =>
@@ -44,7 +92,7 @@ function App() {
 
         <header className="navbar">
           <nav className="menu">
-            <Link to="/">Intro</Link>
+            <Link to="/Intro">Intro</Link>
             <Link to="/visualization">시각화</Link>
             <a href="#model">모델 성능</a>
             <a href="#conclusion">결론</a>
@@ -63,15 +111,24 @@ function App() {
                   transition={{ duration: 0.8 }}
                 >
                   <section className="factory-section">
-                    <h3>🏭 실제 공정 현장</h3>
-                    <img
-                      src="/images/factory.jpg"
-                      alt="공정 현장"
-                      className="factory-image"
-                    />
-                    <p className="factory-caption">
-                      스마트 센서를 통해 공정 데이터를 수집하고 있는 현장
-                    </p>
+                  <h3 className="section-title">⚙ 스마트 팩토리 현장</h3>
+                    <div className="factory-slideshow-wrapper">
+                      <button onClick={handleFactoryPrev} className="factory-nav-button">←</button>
+                      <img
+                        src={factoryImages[currentFactoryIndex].src}
+                        alt="공정 이미지"
+                        className="factory-image"
+                      />
+                      <button onClick={handleFactoryNext} className="factory-nav-button">→</button>
+                    </div>
+                    <p className="factory-caption">{factoryImages[currentFactoryIndex].caption}</p>
+                    <div style={{ marginTop: '12px' }}>
+        <div className="factory-pause-wrapper">
+  <button onClick={togglePause} className="news-nav-button">
+    {isPaused ? '▶ 재생' : '⏸ 일시정지'}
+  </button>
+</div>
+      </div>
                   </section>
 
                   <section className="news-section">
@@ -107,7 +164,11 @@ function App() {
   <Link to="/news" className="news-link">+ 더보기</Link>
 </div>
                   </section>
+                  <section className="anomaly-art-wrapper">
+          <AnomalyArt />
+        </section>
 
+                  <ChartPreview />
                   <div className="intro-tags">
                     <span>📍 이상 탐지</span>
                     <span>📈 시각화</span>
@@ -125,6 +186,7 @@ function App() {
           <Route path="/clock" element={<Clock />} />
           <Route path="/scatter" element={<Scatter />} />
           <Route path="/news" element={<NewsList />} />
+          <Route path="/intro" element={<Intro />} />
         </Routes>
       </div>
     </Router>
