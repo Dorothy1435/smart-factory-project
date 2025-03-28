@@ -1,7 +1,11 @@
 import React from 'react';
 import './Intro.css';
+import LiveSensorChart from './LiveSensorChart';
+
+
 
 const Intro = () => {
+
   return (
     <div className="intro-wrapper">
       <section className="intro-hero">
@@ -30,6 +34,36 @@ const Intro = () => {
           공정 데이터를 직관적으로 이해할 수 있도록 설계되었습니다.
         </p>
       </section>
+      <section className="intro-flowchart">
+  <h3>🧠 AI 기반 스마트 공정 흐름도</h3>
+  <div className="flowchart-container">
+    {[
+      { icon: "🏭", label: "공정" },
+      { arrow: true },
+      { icon: "📡", label: "데이터 수집" },
+      { arrow: true },
+      { icon: "🚨", label: "이상 탐지" },
+      { arrow: true },
+      { icon: "📊", label: "시각화" },
+      { arrow: true },
+      { icon: "🖥️", label: "대시보드" }
+    ].map((item, idx) =>
+      item.arrow ? (
+        <div className="flow-arrow" key={idx}>➡️</div>
+      ) : (
+        <div className="flow-item" key={idx}>
+          <span>{item.icon}</span>
+          <p>{item.label}</p>
+        </div>
+      )
+    )}
+  </div>
+</section>
+<section className="intro-live-chart">
+  <LiveSensorChart />
+</section>
+
+
     </div>
   );
 };

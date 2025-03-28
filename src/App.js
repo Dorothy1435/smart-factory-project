@@ -94,7 +94,7 @@ function App() {
           <nav className="menu">
             <Link to="/Intro">Intro</Link>
             <Link to="/visualization">시각화</Link>
-            <a href="#model">모델 성능</a>
+            <a href="#model">분석</a>
             <a href="#conclusion">결론</a>
           </nav>
         </header>
@@ -114,11 +114,18 @@ function App() {
                   <h3 className="section-title">⚙ 스마트 팩토리 현장</h3>
                     <div className="factory-slideshow-wrapper">
                       <button onClick={handleFactoryPrev} className="factory-nav-button">←</button>
-                      <img
-                        src={factoryImages[currentFactoryIndex].src}
-                        alt="공정 이미지"
-                        className="factory-image"
-                      />
+                      <AnimatePresence mode="wait">
+  <motion.img
+    key={factoryImages[currentFactoryIndex].src}
+    src={factoryImages[currentFactoryIndex].src}
+    alt="공정 이미지"
+    className="factory-image"
+    initial={{ opacity: 0, scale: 0.95 }}
+    animate={{ opacity: 1, scale: 1 }}
+    exit={{ opacity: 0, scale: 1.05 }}
+    transition={{ duration: 0.6 }}
+  />
+</AnimatePresence>
                       <button onClick={handleFactoryNext} className="factory-nav-button">→</button>
                     </div>
                     <p className="factory-caption">{factoryImages[currentFactoryIndex].caption}</p>
