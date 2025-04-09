@@ -11,6 +11,7 @@ import NewsList from './NewsList';
 import ChartPreview from './ChartPreview';
 import AnomalyArt from './AnomalyArt';
 import Intro from './Intro';
+import Analyst from './Analyst';
 import { motion, AnimatePresence } from 'framer-motion';
 import './App.css';
 
@@ -94,7 +95,7 @@ function App() {
           <nav className="menu">
             <Link to="/Intro">Intro</Link>
             <Link to="/visualization">시각화</Link>
-            <a href="#model">분석</a>
+            <Link to="/analyst">분석</Link>
             <a href="#conclusion">결론</a>
           </nav>
         </header>
@@ -194,6 +195,7 @@ function App() {
           <Route path="/scatter" element={<Scatter />} />
           <Route path="/news" element={<NewsList />} />
           <Route path="/intro" element={<Intro />} />
+          <Route path="/analyst" element={<Analyst />} />
         </Routes>
       </div>
     </Router>
