@@ -1,0 +1,225 @@
+/* DBSCAN.css */
+.dbscan-container {
+    padding: 40px;
+    padding-top: 60px;
+    max-width: 900px;
+    margin: 0 auto;
+    text-align: center;
+  }
+  
+  .dbscan-title {
+    font-size: 28px;
+    font-weight: bold;
+    margin-bottom: 20px;
+  }
+  
+  .dbscan-description {
+    font-size: 16px;
+    line-height: 1.6;
+    margin-bottom: 30px;
+  }
+  
+  .dbscan-example {
+    text-align: center;
+    margin-bottom: 30px;
+  }
+  
+  .dbscan-img {
+    max-width: 50%;
+    border-radius: 12px;
+    box-shadow: 0 6px 16px rgba(0, 0, 0, 0.1);
+    transition: transform 0.4s ease-in-out;
+  }
+  
+  .dbscan-img:hover {
+    transform: scale(1.03);
+  }
+  
+  .dbscan-caption {
+    font-size: 15px;
+    color: #374151;
+    margin-top: 12px;
+    line-height: 1.5;
+  }
+  
+  .sim-input {
+    width: 80%;
+    padding: 10px;
+    margin-top: 12px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    font-size: 14px;
+  }
+  
+  .sim-button {
+    margin-top: 12px;
+    padding: 10px 16px;
+    background-color: #f97316;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.2s ease;
+  }
+  
+  .sim-button:hover {
+    background-color: #2563eb;
+  }
+  
+  .example-button {
+    margin-left: 10px;
+    padding: 10px 16px;
+    background-color: #facc15;
+    color: black;
+    border: none;
+    border-radius: 8px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.2s ease;
+  }
+  
+  .example-button:hover {
+    background-color: #eab308;
+  }
+  
+  .dbscan-chart {
+    margin-top: 30px;
+    background-color: #ffffff;
+    padding: 20px;
+    border-radius: 12px;
+    box-shadow: 0 6px 14px rgba(0, 0, 0, 0.05);
+    max-width: 700px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  
+  .accordion-toggle {
+    margin-top: 24px;
+    padding: 10px 16px;
+    background-color: #facc15;
+    color: black;
+    border: none;
+    border-radius: 8px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.2s;
+  }
+  
+  .accordion-toggle:hover {
+    background-color: #eab308;
+  }
+  
+  .dbscan-guide-box {
+    margin-top: 24px;
+    background: linear-gradient(135deg, #e0f7fa, #f0fdf4);
+    padding: 24px 28px;
+    border-radius: 14px;
+    box-shadow: 0 4px 14px rgba(0, 0, 0, 0.06);
+    color: #1e293b;
+    font-size: 16px;
+    line-height: 1.9;
+    text-align: left;
+    width: 80%;
+    margin-left: auto;
+    margin-right: auto;
+    transition: all 0.3s ease-in-out;
+    border-left: 5px solid #22d3ee;
+  }
+  
+  .dbscan-guide-box h3 {
+    font-size: 20px;
+    margin-bottom: 18px;
+    color: #0369a1;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+  }
+  
+  .dbscan-guide-box h3::before {
+    content: "📘";
+    font-size: 22px;
+  }
+  
+  .dbscan-guide-box ul {
+    padding-left: 20px;
+    list-style-type: disc;
+  }
+  
+  .dbscan-guide-box li::marker {
+    color: #0ea5e9;
+  }
+  
+  .dbscan-guide-box li strong {
+    background-color: #fefce8;
+    color: #0f172a;
+    padding: 2px 5px;
+    border-radius: 4px;
+  }
+  
+  .dbscan-application {
+    margin-top: 60px;
+    padding: 15px;
+    background: #f0fdf4;
+    border-left: 5px solid #34d399;
+    border-radius: 12px;
+    box-shadow: 0 4px 14px rgba(0, 0, 0, 0.05);
+    text-align: center;
+    max-width: 650px;
+    margin-left: auto;
+    margin-right: auto;
+    animation: fadeIn 0.6s ease-in-out;
+  }
+  
+  .dbscan-application h2 {
+    font-size: 22px;
+    color: #065f46;
+    margin-bottom: 16px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 8px;
+  }
+  
+  .dbscan-application h2::before {
+    content: "✅";
+    font-size: 20px;
+  }
+  
+  .dbscan-application ul {
+    display: inline-block;
+    text-align: left;
+    font-size: 16px;
+    line-height: 1.7;
+    color: #1e293b;
+    padding-left: 20px;
+  }
+  
+  .dbscan-application li {
+    margin-bottom: 10px;
+    list-style-type: "📌 ";
+  }
+  
+  .forest-navigation {
+    margin-top: 40px;
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+  }
+  
+  .nav-button {
+    padding: 10px 18px;
+    background-color: #3b82f6;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    font-weight: 500;
+    text-decoration: none;
+    cursor: pointer;
+    transition: background-color 0.2s ease;
+  }
+  
+  .nav-button:hover {
+    background-color: #2563eb;
+  }
+  

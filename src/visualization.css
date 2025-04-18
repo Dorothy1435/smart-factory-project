@@ -7,9 +7,10 @@
   }
   
   .visualization-title {
+    padding : 15px;
     font-size: 32px;
     font-weight: bold;
-    margin-bottom: 40px;
+    margin-bottom: 45px;
   }
   
   .card-grid {

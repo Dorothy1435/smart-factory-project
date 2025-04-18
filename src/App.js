@@ -12,6 +12,13 @@ import ChartPreview from './ChartPreview';
 import AnomalyArt from './AnomalyArt';
 import Intro from './Intro';
 import Analyst from './Analyst';
+import Lstm from './Lstm';
+import ModelExplainer from './modelExplainer';
+import Autoencoder from './Autoencoder';
+import IsolationForest from './IsolationForest';
+import DBSCAN from './DBSCAN';
+import GANomaly from './GANomaly';
+
 import { motion, AnimatePresence } from 'framer-motion';
 import './App.css';
 
@@ -95,6 +102,7 @@ function App() {
           <nav className="menu">
             <Link to="/Intro">Intro</Link>
             <Link to="/visualization">시각화</Link>
+            <Link to="/modelExplainer">모델</Link>
             <Link to="/analyst">분석</Link>
             <a href="#conclusion">결론</a>
           </nav>
@@ -196,6 +204,12 @@ function App() {
           <Route path="/news" element={<NewsList />} />
           <Route path="/intro" element={<Intro />} />
           <Route path="/analyst" element={<Analyst />} />
+          <Route path="/lstm" element={<Lstm />} />
+          <Route path="/modelExplainer" element={<ModelExplainer />} />
+          <Route path="/autoencoder" element={<Autoencoder />} />
+          <Route path="/IsolationForest" element={<IsolationForest />} />
+          <Route path="/DBSCAN" element={<DBSCAN />} />
+          <Route path="/GANomaly" element={<GANomaly />} />
         </Routes>
       </div>
     </Router>
