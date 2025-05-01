@@ -18,6 +18,7 @@ import Autoencoder from './Autoencoder';
 import IsolationForest from './IsolationForest';
 import DBSCAN from './DBSCAN';
 import GANomaly from './GANomaly';
+import Conclusion from './Conclusion';
 
 import { motion, AnimatePresence } from 'framer-motion';
 import './App.css';
@@ -104,7 +105,7 @@ function App() {
             <Link to="/visualization">시각화</Link>
             <Link to="/modelExplainer">모델</Link>
             <Link to="/analyst">분석</Link>
-            <a href="#conclusion">결론</a>
+            <Link to="/conclusion">결론</Link>
           </nav>
         </header>
 
@@ -210,6 +211,7 @@ function App() {
           <Route path="/IsolationForest" element={<IsolationForest />} />
           <Route path="/DBSCAN" element={<DBSCAN />} />
           <Route path="/GANomaly" element={<GANomaly />} />
+          <Route path="/conclusion" element={<Conclusion />} />
         </Routes>
       </div>
     </Router>
