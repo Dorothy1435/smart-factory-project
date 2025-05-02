@@ -14,7 +14,7 @@ function Conclusion() {
 
     setLoading(true);
     try {
-      const response = await fetch('http://localhost:5000/generate-summary', {
+      const response = await fetch(`${process.env.REACT_APP_API_URL}/generate-summary`, {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({ logs }), // 🔥 객체 전체 전송
@@ -33,12 +33,13 @@ function Conclusion() {
     if (severity === '주의') return 'severity-warning';
     return 'severity-normal';
   };
+  
 
   const downloadPDF = async () => {
     if (!detailedLogs.length) return;
   
     try {
-      const response = await fetch('http://localhost:5000/download-pdf', {
+      const response = await fetch(`${process.env.REACT_APP_API_URL}/download-pdf`, {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({ logs: detailedLogs }),
